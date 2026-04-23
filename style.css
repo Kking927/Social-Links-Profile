@@ -13,9 +13,8 @@
   --font-family: "Inter", sans-serif;
 
   /* Font Sizes */
-  --fs-title: 1.125rem; /* 18px */
+  --fs-title: 1.25rem; /* 20px */
   --fs-body: 0.875rem; /* 14px */
-  --fs-small: 0.75rem; /* 12px */
 
   /* Font Weights */
   --fw-regular: 400;
@@ -111,7 +110,6 @@ body {
 }
 
 .location {
-  font-size: var(--fs-small);
   font-weight: var(--fw-bold);
   color: var(--color-green);
   display: block;
