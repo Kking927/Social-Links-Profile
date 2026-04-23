@@ -13,7 +13,7 @@
   --font-family: "Inter", sans-serif;
   
   /* Font Sizes (14px base) */
-  --fs-title: clamp(1.25rem, 5vw, 1.5rem);
+  --fs-title: 1.5rem;
   --fs-body: 0.875rem; 
   
   /* Font Weights */
@@ -22,7 +22,7 @@
   --fw-bold: 700;
 
   /* --- Layout & Spacing --- */
-  --card-max-width: 22.5rem; /* 360px */
+  --card-width: 24rem; /* 384px */
   --space-050: 0.25rem; /* 4px */
   --space-100: 0.5rem;  /* 8px */
   --space-150: 0.75rem; /* 12px */
@@ -30,6 +30,8 @@
   --space-300: 1.5rem;  /* 24px */
   --space-400: 2.5rem;  /* 40px */
   --space-500: 2.8125rem; /* 45px */
+  --space-img-gap: 2rem;   /* 32px - Gap after profile picture */
+  --space-section: 2.5rem
 
   /* --- Border Radius --- */
   --radius-lg: 0.75rem; /* 12px */
@@ -62,7 +64,7 @@ body {
 
 .wrapper {
   width: 100%;
-  max-width: var(--card-max-width);
+  max-width: var(--card-width);
 }
 
 .card {
@@ -83,7 +85,7 @@ body {
   width: 5.5rem;
   height: 5.5rem;
   border-radius: 50%;
-  margin-block-end: var(--space-300);
+  margin-block-end: var(--space-img-gap);
   object-fit: cover;
   transition: outline var(--transition-fast), transform var(--transition-fast);
   outline: 0 solid var(--color-green);
@@ -117,6 +119,7 @@ body {
 
 .description {
   font-weight: var(--fw-regular);
+  line-height: 1.5;
   margin-block-end: var(--space-300);
   color: var(--color-white);
   opacity: 0.9;
