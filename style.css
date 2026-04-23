@@ -173,27 +173,21 @@ body {
 .social-nav li:nth-child(5) { animation-delay: 1.3s; }
 
 /* --- Accessibility: Global Reduced Motion --- */
+/* --- Accessibility: Global Reduced Motion --- */
 @media (prefers-reduced-motion: reduce) {
-  /* Target everything globally */
   *,
   *::before,
   *::after {
-    /* Stop all transitions and animations */
-    transition-duration: 0.01ms;
     animation-duration: 0.01ms;
     animation-iteration-count: 1;
+    transition-duration: 0.01ms;
     scroll-behavior: auto;
   }
 
-  /* Reset any transforms (movement/scaling) globally on hover/active */
+  /* This ensures the 'ripple' or any hover lift doesn't trigger */
   *:hover,
   *:active,
   *:focus {
     transform: none;
-  }
-
-  /* Ensure elements hidden for animation are visible */
-  .social-nav li {
-    opacity: 1;
   }
 }
