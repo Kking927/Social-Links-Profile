@@ -34,6 +34,9 @@
   /* --- Border Radius --- */
   --radius-lg: 0.75rem; /* 12px */
   --radius-sm: 0.5rem;  /* 8px */
+  
+  /* --- Effects --- */
+  --shadow-button: 0 4px 12px rgba(0, 0, 0, 0.3);
 
   /* --- Transitions --- */
   --transition-fast: 0.2s ease;
@@ -145,7 +148,7 @@ body {
   background-color: var(--color-green);
   color: var(--color-grey-900);
   transform: translateY(-4px); 
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow-button);
 }
 
 .social-nav a:active {
