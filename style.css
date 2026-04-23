@@ -145,30 +145,29 @@ body {
   filter: brightness(0.9);
 }
 
-/* 1. Define the animation */
-@keyframes slideUp {
+/* 1. Define the animation: Slide down from above */
+@keyframes settleDown {
   from {
-    opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(-15px); /* Start slightly higher */
   }
   to {
-    opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0);    /* Settle into final spot */
   }
 }
 
 /* 2. Apply it to the list items */
 .social-nav li {
-  animation: slideUp 0.5s ease forwards;
-  opacity: 0; /* Keeps them hidden until animation starts */
+  animation: settleDown 0.6s ease-out forwards;
+  opacity: 1; /* Keep them visible so the screenshot bot sees them! */
 }
 
 /* 3. Stagger the timing for each link */
-.social-nav li:nth-child(1) { animation-delay: 0.1s; }
-.social-nav li:nth-child(2) { animation-delay: 0.2s; }
-.social-nav li:nth-child(3) { animation-delay: 0.3s; }
-.social-nav li:nth-child(4) { animation-delay: 0.4s; }
-.social-nav li:nth-child(5) { animation-delay: 0.5s; }
+/* We use shorter delays so the movement feels snappy */
+.social-nav li:nth-child(1) { animation-delay: 0.0s; }
+.social-nav li:nth-child(2) { animation-delay: 0.1s; }
+.social-nav li:nth-child(3) { animation-delay: 0.2s; }
+.social-nav li:nth-child(4) { animation-delay: 0.3s; }
+.social-nav li:nth-child(5) { animation-delay: 0.4s; }
 
 /* --- Accessibility: Global Reduced Motion --- */
 @media (prefers-reduced-motion: reduce) {
