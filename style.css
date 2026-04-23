@@ -3,7 +3,7 @@
   --color-green: hsl(75, 94%, 57%);
   --color-green-glow: hsla(75, 94%, 57%, 0.4);
   --color-white: hsl(0, 0%, 100%);
-  
+
   /* Grey Scale */
   --color-grey-700: hsl(0, 0%, 20%);
   --color-grey-800: hsl(0, 0%, 12%);
@@ -11,11 +11,12 @@
 
   /* --- Typography --- */
   --font-family: "Inter", sans-serif;
-  
-  /* Font Sizes (14px base) */
-  --fs-title: 1.5rem;
-  --fs-body: 0.875rem; 
-  
+
+  /* Font Sizes */
+  --fs-title: 1.125rem; /* 18px */
+  --fs-body: 0.875rem; /* 14px */
+  --fs-small: 0.75rem; /* 12px */
+
   /* Font Weights */
   --fw-regular: 400;
   --fw-semi-bold: 600;
@@ -24,19 +25,17 @@
   /* --- Layout & Spacing --- */
   --card-width: 24rem; /* 384px */
   --space-050: 0.25rem; /* 4px */
-  --space-100: 0.5rem;  /* 8px */
+  --space-100: 0.5rem; /* 8px */
   --space-150: 0.75rem; /* 12px */
-  --space-200: 1rem;    /* 16px */
-  --space-300: 1.5rem;  /* 24px */
-  --space-400: 2.5rem;  /* 40px */
+  --space-200: 1rem; /* 16px */
+  --space-300: 1.5rem; /* 24px */
+  --space-400: 2.5rem; /* 40px */
   --space-500: 2.8125rem; /* 45px */
-  --space-img-gap: 2rem;   /* 32px - Gap after profile picture */
-  --space-section: 2.5rem
 
   /* --- Border Radius --- */
   --radius-lg: 0.75rem; /* 12px */
-  --radius-sm: 0.5rem;  /* 8px */
-  
+  --radius-sm: 0.5rem; /* 8px */
+
   /* --- Effects --- */
   --shadow-button: 0 4px 12px rgba(0, 0, 0, 0.3);
 
@@ -72,7 +71,8 @@ body {
   padding: var(--space-400);
   border-radius: var(--radius-lg);
   text-align: center;
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  transition: transform var(--transition-fast),
+    box-shadow var(--transition-fast);
   cursor: default;
 }
 
@@ -85,7 +85,7 @@ body {
   width: 5.5rem;
   height: 5.5rem;
   border-radius: 50%;
-  margin-block-end: var(--space-img-gap);
+  margin-block-end: var(--space-300);
   object-fit: cover;
   transition: outline var(--transition-fast), transform var(--transition-fast);
   outline: 0 solid var(--color-green);
@@ -111,8 +111,9 @@ body {
 }
 
 .location {
-  color: var(--color-green);
+  font-size: var(--fs-small);
   font-weight: var(--fw-bold);
+  color: var(--color-green);
   display: block;
   margin-block-end: var(--space-300);
 }
@@ -150,7 +151,7 @@ body {
 .social-nav a:focus-visible {
   background-color: var(--color-green);
   color: var(--color-grey-900);
-  transform: translateY(-4px); 
+  transform: translateY(-4px);
   box-shadow: var(--shadow-button);
 }
 
@@ -180,11 +181,21 @@ body {
 }
 
 /* 3. Stagger the timing for each link */
-.social-nav li:nth-child(1) { animation-delay: 0.5s; }
-.social-nav li:nth-child(2) { animation-delay: 0.7s; }
-.social-nav li:nth-child(3) { animation-delay: 0.9s; }
-.social-nav li:nth-child(4) { animation-delay: 1.1s; }
-.social-nav li:nth-child(5) { animation-delay: 1.3s; }
+.social-nav li:nth-child(1) {
+  animation-delay: 0.5s;
+}
+.social-nav li:nth-child(2) {
+  animation-delay: 0.7s;
+}
+.social-nav li:nth-child(3) {
+  animation-delay: 0.9s;
+}
+.social-nav li:nth-child(4) {
+  animation-delay: 1.1s;
+}
+.social-nav li:nth-child(5) {
+  animation-delay: 1.3s;
+}
 
 /* --- Accessibility: Global Reduced Motion --- */
 /* --- Accessibility: Global Reduced Motion --- */
