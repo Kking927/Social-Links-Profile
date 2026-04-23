@@ -22,6 +22,7 @@
   --fw-bold: 700;
 
   /* --- Layout & Spacing --- */
+  --space-050: 0.25rem; /* 4px */
   --space-100: 0.5rem;  /* 8px */
   --space-150: 0.75rem; /* 12px */
   --space-200: 1rem;    /* 16px */
@@ -113,14 +114,14 @@ body {
   font-weight: var(--fw-regular);
   margin-block-end: var(--space-300);
   color: var(--color-white);
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .social-nav {
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  gap: var(--space-200);
+  gap: var(--space-150);
 }
 
 .social-nav a {
