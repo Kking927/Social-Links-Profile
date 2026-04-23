@@ -54,7 +54,7 @@ body {
 
 .wrapper {
   width: 100%;
-  max-width: 384px;
+  max-width: 24rem;
 }
 
 .card {
@@ -72,8 +72,8 @@ body {
 }
 
 .profile-img {
-  width: 88px;
-  height: 88px;
+  width: 5.5rem;
+  height: 5.5rem;
   border-radius: 50%;
   margin-bottom: var(--space-300);
   object-fit: cover;
